@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+$main-color: #000;
+$active-route: #f00;
+
+.navbar {
+  font-family: 'Anton', sans-serif !important;
+  background-color: $main-color;
+  .container-fluid {
+    .navbar-brand {
+      img {
+        transform: scale(2.5);
+        -webkit-transform: scale(2.5);
+        -moz-transform: scale(2.5);
+      }
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-link {
+          font-size: 1.2rem;
+          margin-left: 1rem;
+          transition: transform 0.2s ease-in-out;
+          -webkit-transition: transform 0.2s ease-in-out;
+          -moz-transition: transform 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-route {
+  color: $active-route;
+}

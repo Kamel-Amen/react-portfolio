@@ -1,17 +1,49 @@
 {
   "tools": [
     {
-      "type": "fontAwesomeIcon",
-      "src": "https://img.icons8.com/color/100/html-5--v1.png"
+      "icon": "https://img.icons8.com/color/100/html-5--v1.png",
+      "title": "HTML5",
+      "color": "#E65100"
     },
-    "<FontAwesomeIcon icon={faHtml5} />",
-    "<i id='skill' class='fa-brands fa-css3-alt' style='color: #264de4'></i>",
-    "<i id='skill' class='fa-brands fa-js' style='color: #f5b918'></i>",
-    "<i id='skill' class='fa-brands fa-react' style='color: #5dcaf0'></i>",
-    "<i id='skill' class='fa-brands fa-sass' style='color: #cd6799'></i>",
-    "<i id='skill' class='fa-brands fa-bootstrap' style='color: #563d7c'></i>",
-    "<i id='skill' class='fa-brands fa-square-git' style='color: #316efd'></i>",
-    "<img width='90' height='85' src='https://img.icons8.com/color/480/redux.png' alt='redux'/>",
-    "<img width='100' height='100' src='https://img.icons8.com/color/100/firebase.png' alt='firebase'/>"
+    {
+      "icon": "https://img.icons8.com/color/100/css3.png",
+      "title": "CSS3",
+      "color": "#039BE5"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/javascript--v1.png",
+      "title": "Javascript",
+      "color": "#FFD600"
+    },
+    {
+      "icon": "https://img.icons8.com/color-glass/48/bootstrap.png",
+      "title": "Bootstrap",
+      "color": "#6C19FF"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/sass.png",
+      "title": "SASS",
+      "color": "#F06292"
+    },
+    {
+      "icon": "https://img.icons8.com/officel/80/react.png",
+      "title": "React JS",
+      "color": "#8BB7F0"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/redux.png",
+      "title": "Redux",
+      "color": "#7E57C2"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/git.png",
+      "title": "Git",
+      "color": "#F4511E"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/firebase.png",
+      "title": "Firebase",
+      "color": "#FFC400"
+    }
   ]
 }

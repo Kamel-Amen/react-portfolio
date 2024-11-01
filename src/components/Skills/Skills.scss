@@ -28,7 +28,7 @@ $secondary-color: #8c8c8c;
     // * Waviy header
     .waviy {
       -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-      letter-spacing: 1rem;
+      letter-spacing: 0.5rem;
       font-size: 3rem;
       span {
         position: relative;
@@ -44,8 +44,35 @@ $secondary-color: #8c8c8c;
     // * Tools
     .tools {
       .tool {
-        width: 100%;
-        height: 100%;
+        margin: 2.5rem 4rem;
+        width: 6.25rem;
+        height: 9.375rem;
+        img {
+          transition: transform 0.3s ease-in-out;
+          -webkit-transition: transform 0.3s ease-in-out;
+          -moz-transition: transform 0.3s ease-in-out;
+        }
+        &:hover {
+          img {
+            transform: scale(1.2) rotate(25deg);
+            -webkit-transform: scale(1.2) rotate(25deg);
+            -moz-transform: scale(1.2) rotate(25deg);
+          }
+        }
+      }
+    }
+  }
+
+  //* Services
+  .services-sec {
+    .services {
+      ul {
+        list-style: none;
+        li {
+          font-size: 2.5rem;
+          border-bottom: 1px solid $main-color;
+          margin-bottom: 1.5rem;
+        }
       }
     }
   }
@@ -93,5 +120,106 @@ $secondary-color: #8c8c8c;
     transform: translateY(-20px);
     -webkit-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
+  }
+}
+
+// ? Media Queries
+/* Start MediaQueries */
+
+// * Start Max Width 425px (Small, Medium, Large Phones)
+@media screen and (max-width: 425px) {
+  .skills {
+    .sections {
+      // ? start intro
+      .intro {
+        // ? words
+        .words {
+          font-size: 1.5rem;
+          line-height: 2;
+        }
+      }
+    }
+
+    // * Start Techs
+    .techs {
+      // * Waviy header
+      .waviy {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+      }
+
+      // * Tools
+      .tools {
+        .tool {
+          margin: 1rem 1.8rem;
+        }
+      }
+    }
+
+    //* Services
+    .services-sec {
+      margin-top: 3rem;
+      header {
+        width: 100% !important;
+      }
+      .services {
+        margin-bottom: 0 !important;
+        .info {
+          ul {
+            li {
+              font-size: 1.8rem;
+              margin-bottom: 2.5rem;
+            }
+          }
+        }
+        .img {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// * Start Max Width 1023px and min width 768px (Tablets)
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  .skills {
+    .sections {
+      // ? start intro
+      .intro {
+        // ? words
+        .words {
+          font-size: 1.48rem;
+        }
+      }
+    }
+    //* Services
+    .services-sec {
+      padding-bottom: 0 !important;
+      .services {
+        ul {
+          li {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Start Min Width 1024px (Big Screens)
+@media screen and (min-width: 1024px) {
+  .skills {
+    //* Services
+    .services-sec {
+      padding-bottom: 0 !important;
+      .services {
+        ul {
+          li {
+            margin-bottom: 1.8rem;
+          }
+        }
+      }
+    }
   }
 }

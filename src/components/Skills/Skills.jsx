@@ -1,12 +1,12 @@
 // import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Skills.css';
 import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import developer from '../../assets/gifs/developer.gif';
-// import { useEffect } from 'react';
 import data from './skills.json';
-import { useEffect, useState } from 'react';
+import programmingIcon from '../../assets/svg/programming.svg';
 
 const Skills = () => {
   const [tools, setTools] = useState([]);
@@ -59,24 +59,67 @@ const Skills = () => {
         {/* // ? Techs Section */}
         <section className='techs container mx-auto text-center'>
           <div className='waviy position-relative mb-5'>
-            <span style={{ '--i': 1 }}>T</span>
-            <span style={{ '--i': 2 }}>E</span>
-            <span style={{ '--i': 3 }}>C</span>
-            <span style={{ '--i': 4 }}>H</span>
-            <span style={{ '--i': 5 }}>N</span>
-            <span style={{ '--i': 6 }}>O</span>
-            <span style={{ '--i': 7 }}>L</span>
-            <span style={{ '--i': 8 }}>O</span>
-            <span style={{ '--i': 9 }}>G</span>
-            <span style={{ '--i': 10 }}>I</span>
-            <span style={{ '--i': 11 }}>E</span>
-            <span style={{ '--i': 12 }}>S</span>
+            <span style={{ '--i': 1 }}>W</span>
+            <span style={{ '--i': 2 }}>H</span>
+            <span style={{ '--i': 3 }}>A</span>
+            <span style={{ '--i': 4 }}>T</span>
+            <span className='mx-3' style={{ '--i': 5 }}>
+              I
+            </span>
+            <span style={{ '--i': 6 }}>U</span>
+            <span style={{ '--i': 7 }}>S</span>
+            <span style={{ '--i': 8 }}>E</span>
+            <span style={{ '--i': 9 }}>?</span>
           </div>
 
           {/* // ? Tools Section */}
-          <div className='tools w-100 bg-danger pb-5'>
-            <section className='col-1'>
-              <img src={data.tools[0].src} alt='icon' className='tool' />
+          <div className='tools py-3 d-flex justify-content-evenly flex-wrap'>
+            {tools.map((tool) => {
+              return (
+                <section className='d-flex flex-column tool' key={tool.title}>
+                  <img src={tool.icon} alt='icon' className='icon-src mb-1' />
+                  <h4 className='icon-title' style={{ color: tool.color }}>
+                    {tool.title}
+                  </h4>
+                </section>
+              );
+            })}
+          </div>
+        </section>
+
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 1440 320'
+          className='mt-4'
+        >
+          <path
+            fill='#FFC107'
+            fillOpacity='1'
+            d='M0,224L1440,32L1440,0L0,0Z'
+          ></path>
+        </svg>
+
+        {/* // ** Services Section */}
+        <section className='services-sec container text-center w-100 pb-5'>
+          <header className='bg-warning fs-1 w-50 mx-auto py-2 rounded-5 text-uppercase'>
+            How Can i serve You !
+          </header>
+          <div className='services my-5 py-5 row mx-0'>
+            <section className='info col-lg-6 col-md-6 col-sm-12 text-start'>
+              <h3 className='text-secondary text-decoration-underline'>
+                Services
+              </h3>
+              <ul className='text-warning my-4 p-0'>
+                <li>Building Websites</li>
+                <li>Building Web Applications</li>
+                <li>Converting a Design to a Website</li>
+                <li>and more ...</li>
+              </ul>
+            </section>
+            <section className='img col-lg-6 col-md-6 col-sm-12'>
+              <div className='holder'>
+                <img className='w-100 h-100' src={programmingIcon} alt='icon' />
+              </div>
             </section>
           </div>
         </section>

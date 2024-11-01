@@ -11,7 +11,7 @@ const Home = () => {
     <div className='home'>
       <Navbar />
       <div className='container'>
-        <section className='home-sec row m-0 mt-5 justify-content-between'>
+        <section className='home-sec row m-0 mt-5'>
           {/* Image Section Code */}
           <div className='col-lg-4 col-md-5 col-sm-12 img-sec rounded-5'>
             <div className='w-100 h-100 overflow-hidden rounded-5'>
@@ -31,7 +31,7 @@ const Home = () => {
               Welcome I&apos;m KAMEL
               <FontAwesomeIcon
                 icon={faFaceLaughBeam}
-                className='ms-2 icon-scale'
+                className='ms-3 icon-scale'
               />{' '}
             </header>
             {/* Animated positions text */}

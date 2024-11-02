@@ -7,8 +7,15 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Certificates from './components/Certificates/Certificates';
 import Contact from './components/Contact/Contact';
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div className='App'>
       <Router>

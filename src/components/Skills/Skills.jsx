@@ -7,14 +7,23 @@ import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import developer from '../../assets/gifs/developer.gif';
 import data from './skills.json';
 import programmingIcon from '../../assets/svg/programming.svg';
+import Loader from '../Reusable/Loader';
 
 const Skills = () => {
   const [tools, setTools] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // console.log(data.tools[0].icon);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
     setTools(data.tools);
   }, []);
+
+  if (!isLoaded) {
+    return <Loader />;
+  }
 
   return (
     <div className='skills w-100'>
@@ -24,7 +33,7 @@ const Skills = () => {
         <section className='intro container mx-auto row m-0 mt-5'>
           {/* // * Words */}
           <div className='col-lg-6 col-md-6 col-sm-12 words text-warning d-flex justify-content-center align-items-center'>
-            <p>
+            <p data-aos='fade-right'>
               {' '}
               Wanna convert your idea into special, modern, responsive, and
               professional website or web app. Let&apos;s meet and I will pay
@@ -37,7 +46,10 @@ const Skills = () => {
           </div>
 
           {/* // * Img Cover */}
-          <div className='col-lg-6 col-md-6 col-sm-12 img d-flex justify-content-center align-items-center'>
+          <div
+            className='col-lg-6 col-md-6 col-sm-12 img d-flex justify-content-center align-items-center'
+            data-aos='zoom-in'
+          >
             <div className='holder w-100 h-100'>
               <img src={developer} alt='developer' className='w-100 h-100' />
             </div>
@@ -48,6 +60,8 @@ const Skills = () => {
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 1440 320'
           className='mt-5 mb-2 pt-4'
+          data-aos='fade-down'
+          data-aos-duration='1500'
         >
           <path
             fill='#ffc107'
@@ -58,7 +72,11 @@ const Skills = () => {
 
         {/* // ? Techs Section */}
         <section className='techs container mx-auto text-center'>
-          <div className='waviy position-relative mb-5'>
+          <div
+            className='waviy position-relative mb-5'
+            data-aos='fade-right'
+            data-aos-duration='2000'
+          >
             <span style={{ '--i': 1 }}>W</span>
             <span style={{ '--i': 2 }}>H</span>
             <span style={{ '--i': 3 }}>A</span>
@@ -73,7 +91,11 @@ const Skills = () => {
           </div>
 
           {/* // ? Tools Section */}
-          <div className='tools py-3 d-flex justify-content-evenly flex-wrap'>
+          <div
+            className='tools py-3 d-flex justify-content-evenly flex-wrap'
+            data-aos='fade-up'
+            data-aos-duration='2000'
+          >
             {tools.map((tool) => {
               return (
                 <section className='d-flex flex-column tool' key={tool.title}>
@@ -91,6 +113,7 @@ const Skills = () => {
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 1440 320'
           className='mt-4'
+          data-aos='fade-down'
         >
           <path
             fill='#FFC107'
@@ -101,11 +124,18 @@ const Skills = () => {
 
         {/* // ** Services Section */}
         <section className='services-sec container text-center w-100 pb-5'>
-          <header className='bg-warning fs-1 w-50 mx-auto py-2 rounded-5 text-uppercase'>
+          <header
+            className='bg-warning fs-1 w-50 mx-auto py-2 rounded-5 text-uppercase'
+            data-aos='fade-down'
+          >
             How Can i serve You !
           </header>
           <div className='services my-5 py-5 row mx-0'>
-            <section className='info col-lg-6 col-md-6 col-sm-12 text-start'>
+            <section
+              className='info col-lg-6 col-md-6 col-sm-12 text-start'
+              data-aos='fade-right'
+              data-aos-duration='1500'
+            >
               <h3 className='text-secondary text-decoration-underline'>
                 Services
               </h3>
@@ -117,7 +147,11 @@ const Skills = () => {
               </ul>
             </section>
             <section className='img col-lg-6 col-md-6 col-sm-12'>
-              <div className='holder'>
+              <div
+                className='holder'
+                data-aos='flip-right'
+                data-aos-duration='1500'
+              >
                 <img className='w-100 h-100' src={programmingIcon} alt='icon' />
               </div>
             </section>

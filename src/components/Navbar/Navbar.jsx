@@ -5,10 +5,12 @@ import './navbar.css';
 
 const Navbar = () => {
   return (
-    <div className='container'>
+    <div className='container overflow-hidden'>
       <nav
         className='navbar sticky-top navbar-expand-lg overflow-hidden'
         data-bs-theme='dark'
+        data-aos='fade-down'
+        data-aos-duration='1000'
       >
         <div className='container-fluid'>
           <NavLink className='navbar-brand ms-5' to='/'>

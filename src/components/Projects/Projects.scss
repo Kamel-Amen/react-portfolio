@@ -1,0 +1,158 @@
+// * Variables
+$mainColor: #dc3545;
+
+// ? Projects Section
+.projects-sec {
+  background-color: #000;
+  .projects {
+    // * Filter sec
+    .filter-sec {
+      background-color: #000;
+      .filter-holder {
+        width: auto;
+        .button {
+          .logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            transition: transform 0.2s ease-in-out;
+            -webkit-transition: transform 0.2s ease-in-out;
+            -moz-transition: transform 0.2s ease-in-out;
+          }
+          &:hover {
+            .logo {
+              transform: scale(1.2) rotate(10deg);
+              -webkit-transform: scale(1.2) rotate(10deg);
+              -moz-transform: scale(1.2) rotate(10deg);
+            }
+          }
+        }
+      }
+    }
+
+    // * Projects area
+    .projects-area {
+      padding-top: 6rem !important;
+      .proj {
+        border-bottom: 1px solid #aaa;
+        padding: 2rem 0 3rem;
+
+        // * Project Image
+        .proj-img {
+          .project-cover-holder {
+            img {
+              transition: transform 0.3s ease-in-out;
+              -webkit-transition: transform 0.3s ease-in-out;
+              -moz-transition: transform 0.3s ease-in-out;
+            }
+          }
+        }
+        &:hover {
+          .proj-img {
+            .project-cover-holder {
+              img {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        // * Project info
+        .proj-info {
+          ul {
+            list-style: none;
+            li {
+              width: 2.5rem;
+              height: 2.5rem;
+              margin: 0 0.25rem;
+            }
+          }
+          .buttons {
+            #btn {
+              background: transparent;
+              cursor: pointer;
+              outline-offset: 4px;
+              transition: filter 250ms;
+              user-select: none;
+              touch-action: manipulation;
+              .shadow {
+                background: hsl(0deg 0% 0% / 0.25);
+                will-change: transform;
+                transform: translateY(2px);
+                transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+              }
+              .edge {
+                background: linear-gradient(
+                  to left,
+                  hsl(340deg 100% 16%) 0%,
+                  hsl(340deg 100% 32%) 8%,
+                  hsl(340deg 100% 32%) 92%,
+                  hsl(340deg 100% 16%) 100%
+                );
+              }
+              .front {
+                padding: 0.5rem 1.25rem;
+                border-radius: 12px;
+                font-size: 1.1rem;
+                background: hsl(345deg 100% 47%);
+                will-change: transform;
+                transform: translateY(-4px);
+                transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+                -webkit-border-radius: 12px;
+                -moz-border-radius: 12px;
+                -webkit-transform: translateY(-4px);
+                -moz-transform: translateY(-4px);
+              }
+
+              &:hover {
+                filter: brightness(110%);
+              }
+              &:hover .front {
+                transform: translateY(-6px);
+                transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+              }
+              &:active .front {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+              }
+              &:hover .shadow {
+                transform: translateY(4px);
+                transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+              }
+              &:active .shadow {
+                transform: translateY(1px);
+                transition: transform 34ms;
+              }
+              &:focus:not(:focus-visible) {
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Default Classes
+.active {
+  animation: popping 0.8s ease-in-out infinite;
+  -webkit-animation: popping 0.8s ease-in-out infinite;
+  border: 0 !important;
+}
+
+// * Keyframes
+@keyframes popping {
+  0%,
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+    -webkit-transform: scale(1.2) rotate(15deg);
+    -moz-transform: scale(1.2) rotate(15deg);
+  }
+}

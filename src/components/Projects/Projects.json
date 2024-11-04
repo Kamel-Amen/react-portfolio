@@ -1,0 +1,20 @@
+{
+  "projectsData": [
+    {
+      "title": "Ahmed El-Shikh Workshop",
+      "privateType": true,
+      "genre": "Vanilla JS",
+      "desc": "Freelance project with furniture theme, a slideshow for wooden, and handmade products",
+      "tools": [
+        "https://img.icons8.com/color/100/html-5--v1.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color/100/javascript--v1.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png"
+      ],
+      "youtube": "https://youtu.be/yvf7wND_iYY",
+      "preview": "https://youtu.be/yvf7wND_iYY",
+      "coverSrc": "/src/assets/projects/p1.png"
+    }
+  ]
+}

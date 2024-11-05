@@ -38,6 +38,9 @@ $mainColor: #dc3545;
       .proj {
         border-bottom: 1px solid #aaa;
         padding: 3rem 0;
+        &:last-of-type {
+          padding-bottom: 4.9rem !important;
+        }
 
         // * Project Image
         .proj-img {

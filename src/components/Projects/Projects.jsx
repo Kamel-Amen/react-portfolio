@@ -70,9 +70,13 @@ const Projects = () => {
   return (
     <div className='projects-sec'>
       <Navbar />
-      <section className='projects container'>
+      <section className='projects container overflow-hidden'>
         {/* // ? Filter Section */}
-        <div className='filter-sec mt-2 d-flex justify-content-center rounded-5 overflow-hidden position-fixed start-0 w-100'>
+        <div
+          className='filter-sec mt-2 d-flex justify-content-center rounded-5 overflow-hidden position-fixed start-0 w-100'
+          data-aos='fade-down'
+          data-aos-duration='1500'
+        >
           <div className='filter-holder d-flex justify-content-center bg-light rounded-5 px-3'>
             {filters.map((genre, idx) => (
               <button
@@ -101,14 +105,22 @@ const Projects = () => {
                     src={proj.coverSrc}
                     alt={proj.title}
                     className='w-100 h-100 rounded-2'
+                    data-aos='flip-right'
+                    data-aos-duration='2000'
                   />
                 </div>
               </section>
 
               {/* Info section */}
               <section className='col-md-6 col-sm-12 proj-info'>
-                <h1 className='text-danger'>{proj.title}</h1>
-                <h4 className='text-light'>
+                <h1 className='text-danger' data-aos='fade-down'>
+                  {proj.title}
+                </h1>
+                <h4
+                  className='text-light'
+                  data-aos='fade-down'
+                  data-aos-duration='1750'
+                >
                   {proj.privateType ? (
                     <p>
                       Closed Source Project{' '}
@@ -127,15 +139,33 @@ const Projects = () => {
                     </p>
                   )}
                 </h4>
-                <h5 className='w-75 my-2 text-secondary'>{proj.desc}</h5>
-                <ul className='p-0 d-flex my-3'>
+                <h5
+                  className='w-75 my-2 text-secondary'
+                  data-aos='fade-left'
+                  data-aos-duration='2500'
+                >
+                  {proj.desc}
+                </h5>
+
+                {/* // ? Start List of tools */}
+                <ul
+                  className='p-0 d-flex my-3'
+                  data-aos='zoom-out'
+                  data-aos-duration='1500'
+                >
                   {proj.tools.map((tool, idx) => (
                     <li key={idx}>
                       <img src={tool} alt={tool} className='w-100 h-100' />
                     </li>
                   ))}
                 </ul>
-                <div className='buttons d-flex mt-4'>
+
+                {/* // ? Start Options Buttons */}
+                <div
+                  className='buttons d-flex mt-4'
+                  data-aos='zoom-in'
+                  data-aos-duration='2000'
+                >
                   <a
                     id='btn'
                     className='position-relative border-0 p-0 me-2'

@@ -4,9 +4,18 @@ import './Certificates.css';
 
 const Certificates = () => {
   return (
-    <div className='certificates'>
+    <div className='certificates overflow-hidden'>
       <Navbar />
-      Certificates
+      <section className='container certificates-sec'>
+        <div className='card'>
+          <div className='icon'>new</div>
+          <strong> Instagram</strong>
+          <div className='card__body'>
+            Get UI elements that help you stand out.
+          </div>
+          <span>Follow us</span>
+        </div>
+      </section>
     </div>
   );
 };

@@ -3,11 +3,14 @@ $mainColor: #dc3545;
 
 // ? Projects Section
 .projects-sec {
-  background-color: #000;
+  background-color: #000 !important;
+  background: url('/src/assets/svg/bg-stars.svg') no-repeat center;
+  background-size: cover;
   .projects {
     // * Filter sec
     .filter-sec {
-      background-color: #000;
+      z-index: 99 !important;
+      background-color: transparent;
       .filter-holder {
         width: auto;
         .button {
@@ -34,7 +37,7 @@ $mainColor: #dc3545;
       padding-top: 6rem !important;
       .proj {
         border-bottom: 1px solid #aaa;
-        padding: 2rem 0 3rem;
+        padding: 3rem 0;
 
         // * Project Image
         .proj-img {
@@ -136,7 +139,7 @@ $mainColor: #dc3545;
 }
 
 // * Default Classes
-.active {
+.active-filter-genre {
   animation: popping 0.8s ease-in-out infinite;
   -webkit-animation: popping 0.8s ease-in-out infinite;
   border: 0 !important;
@@ -154,5 +157,101 @@ $mainColor: #dc3545;
     transform: scale(1.2) rotate(15deg);
     -webkit-transform: scale(1.2) rotate(15deg);
     -moz-transform: scale(1.2) rotate(15deg);
+  }
+}
+
+// ? Media Queries
+/* Start MediaQueries */
+
+// * Start Max Width 425px (Small, Medium, Large Phones)
+@media screen and (max-width: 425px) {
+  // ? Projects Section
+  .projects-sec {
+    .projects {
+      // * Filter sec
+      .filter-sec {
+        margin-top: 2rem !important;
+        .filter-holder {
+          .button {
+            padding: 0.25rem 0.4rem;
+            .logo {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
+
+      // * Projects area
+      .projects-area {
+        padding-top: 5rem !important;
+        .proj {
+          margin-bottom: 1rem !important;
+          // * Project info
+          .proj-info {
+            h1 {
+              margin-top: 2rem;
+            }
+            h5 {
+              width: 100% !important;
+            }
+            ul {
+              li {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+            .buttons {
+              #btn {
+                .front {
+                  padding: 0.25rem 1rem;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * Start Max Width 1023px and min width 768px (Tablets)
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  // ? Projects Section
+  .projects-sec {
+    .projects {
+      // * Filter sec
+      .filter-sec {
+        background-color: transparent;
+        .filter-holder {
+          margin-top: 1rem;
+        }
+      }
+      // * Projects area
+      .projects-area {
+        padding-top: 5rem !important;
+        .proj {
+          padding: 2rem 0 3rem;
+        }
+      }
+    }
+  }
+}
+
+// * Start Min Width 1024px (Big Screens)
+@media screen and (min-width: 1024px) {
+  // ? Projects Section
+  .projects-sec {
+    .projects {
+      // * Filter sec
+      .filter-sec {
+        background: transparent;
+      }
+      // * Projects area
+      .projects-area {
+        padding-top: 5rem !important;
+      }
+    }
   }
 }

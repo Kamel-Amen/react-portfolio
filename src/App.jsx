@@ -10,6 +10,8 @@ import Contact from './components/Contact/Contact';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   useEffect(() => {
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className='App'>
+      <ToastContainer />
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />

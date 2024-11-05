@@ -1,14 +1,22 @@
 import { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Projects.css';
-import data from './Projects.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEye,
+  faLaptopCode,
+  faLock,
+  faLockOpen,
+} from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import data from './Projects.json';
+import { toast } from 'react-toastify';
+import Loader from '../Reusable/Loader';
 
 const Projects = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState(data.projectsData);
+  const [projects, setProjects] = useState([]);
   let filters = [
     {
       category: 'Vanilla JS',
@@ -19,7 +27,9 @@ const Projects = () => {
       logo: 'https://img.icons8.com/officel/80/react.png',
     },
   ];
-  const [projects, setProjects] = useState([]);
+
+  // * Loader Code
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleFilterEvent = (selectedGenre) => {
     if (selectedFilters.includes(selectedGenre)) {
@@ -31,8 +41,13 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
     setProjects(data.projectsData);
     filterItems();
+    toast('Select one or more project type to display from filter menu !');
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedFilters]);
 
@@ -48,6 +63,10 @@ const Projects = () => {
     }
   };
 
+  if (!isLoaded) {
+    return <Loader />;
+  }
+
   return (
     <div className='projects-sec'>
       <Navbar />
@@ -59,7 +78,9 @@ const Projects = () => {
               <button
                 onClick={() => handleFilterEvent(genre.category)}
                 className={`button btn ${
-                  selectedFilters?.includes(genre.category) ? 'active' : ''
+                  selectedFilters?.includes(genre.category)
+                    ? 'active-filter-genre'
+                    : ''
                 }`}
                 key={`filters-${idx}`}
               >
@@ -117,8 +138,9 @@ const Projects = () => {
                 <div className='buttons d-flex mt-4'>
                   <a
                     id='btn'
-                    className='position-relative border-0 p-0 mx-2'
+                    className='position-relative border-0 p-0 me-2'
                     href={proj.youtube}
+                    target='_blank'
                   >
                     <span className='shadow position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
                     <span className='edge position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
@@ -131,6 +153,7 @@ const Projects = () => {
                     id='btn'
                     className='position-relative border-0 p-0 mx-2'
                     href={proj.preview}
+                    target='_blank'
                   >
                     <span className='shadow position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
                     <span className='edge position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
@@ -139,6 +162,23 @@ const Projects = () => {
                       <FontAwesomeIcon icon={faEye} />
                     </span>
                   </a>
+                  {proj.privateType ? (
+                    ''
+                  ) : (
+                    <a
+                      id='btn'
+                      className='position-relative border-0 p-0 mx-2'
+                      href={proj.sourceCode}
+                      target='_blank'
+                    >
+                      <span className='shadow position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
+                      <span className='edge position-absolute top-0 start-0 w-100 h-100 rounded-3'></span>
+                      <span className='front text d-block position-relative text-white'>
+                        {' '}
+                        <FontAwesomeIcon icon={faLaptopCode} />
+                      </span>
+                    </a>
+                  )}
                 </div>
               </section>
             </div>

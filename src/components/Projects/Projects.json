@@ -1,6 +1,7 @@
 {
   "projectsData": [
     {
+      "id": 1,
       "title": "Ahmed El-Shikh Workshop",
       "privateType": true,
       "genre": "Vanilla JS",
@@ -15,6 +16,99 @@
       "youtube": "https://youtu.be/yvf7wND_iYY",
       "preview": "https://youtu.be/yvf7wND_iYY",
       "coverSrc": "/src/assets/projects/p1.png"
+    },
+    {
+      "id": 2,
+      "title": "El Araby Group ERP System",
+      "privateType": true,
+      "genre": "Vanilla JS",
+      "desc": "ERP System for private company with all ERP sections like [ Stocks, Purchases, HR, Clients, ..etc]",
+      "tools": [
+        "https://img.icons8.com/color/100/html-5--v1.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color/100/javascript--v1.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png"
+      ],
+      "youtube": "https://youtu.be/nLL8qRH2Q5M",
+      "preview": "https://youtu.be/nLL8qRH2Q5M",
+      "coverSrc": "/src/assets/projects/p2.png"
+    },
+    {
+      "id": 3,
+      "title": "Just Play || Games World",
+      "privateType": false,
+      "genre": "Vanilla JS",
+      "desc": "'Just Play' is a small games website with 8 different games and many levels of difficulty, game lives, timers and lots of animation effects. Take a look and enjoy",
+      "tools": [
+        "https://img.icons8.com/color/100/html-5--v1.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color/100/javascript--v1.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png",
+        "https://img.icons8.com/color/100/git.png"
+      ],
+      "youtube": "https://kamel-amen.github.io/Just-Play/",
+      "preview": "https://kamel-amen.github.io/Just-Play/",
+      "sourceCode": "https://github.com/Kamel-Amen/Just-Play",
+      "coverSrc": "/src/assets/projects/p3.png"
+    },
+    {
+      "id": 4,
+      "title": "E-Market",
+      "privateType": false,
+      "genre": "React JS",
+      "desc": "Simple E-Commerce web app with many components like [options, products, shopping cart, ...and more]",
+      "tools": [
+        "https://img.icons8.com/officel/80/react.png",
+        "https://img.icons8.com/color/100/redux.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png",
+        "https://img.icons8.com/color/100/git.png"
+      ],
+      "youtube": "https://kamel-amen.github.io/e-market/",
+      "preview": "https://kamel-amen.github.io/e-market/",
+      "sourceCode": "https://github.com/Kamel-Amen/e-market",
+      "coverSrc": "/src/assets/projects/p4.png"
+    },
+    {
+      "id": 5,
+      "title": "Library Management System",
+      "privateType": false,
+      "genre": "React JS",
+      "desc": "LMS is a small library application for dealing with books online",
+      "tools": [
+        "https://img.icons8.com/officel/80/react.png",
+        "https://img.icons8.com/color/100/redux.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png",
+        "https://img.icons8.com/color/100/git.png"
+      ],
+      "youtube": "https://youtu.be/heAzLRd5Bgk",
+      "preview": "https://kamel-amen.github.io/LMS/",
+      "sourceCode": "https://github.com/Kamel-Amen/LMS",
+      "coverSrc": "/src/assets/projects/p5.png"
+    },
+    {
+      "id": 6,
+      "title": "Firebase Todo List",
+      "privateType": false,
+      "genre": "React JS",
+      "desc": "Todo list with full authentication system using firebase",
+      "tools": [
+        "https://img.icons8.com/officel/80/react.png",
+        "https://img.icons8.com/color/100/firebase.png",
+        "https://img.icons8.com/color/100/css3.png",
+        "https://img.icons8.com/color-glass/48/bootstrap.png",
+        "https://img.icons8.com/color/100/sass.png",
+        "https://img.icons8.com/color/100/git.png"
+      ],
+      "youtube": "https://youtu.be/MGSSROx66v8",
+      "preview": "https://todo-list-b7265.web.app/",
+      "sourceCode": "https://github.com/Kamel-Amen/ToDo-List-Firebase",
+      "coverSrc": "/src/assets/projects/p6.png"
     }
   ]
 }

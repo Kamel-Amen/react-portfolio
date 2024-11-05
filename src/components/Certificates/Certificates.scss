@@ -1,70 +1,281 @@
 // * Start certificates section
 .certificates {
+  background: #121212;
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+  animation: move 4s linear infinite;
+  -webkit-animation: move 4s linear infinite;
   .certificates-sec {
-    /* From Uiverse.io by satyamchaudharydev */
     .card {
       --bg: #f7f7f8;
       --hover-bg: #ffe5f4;
       --hover-text: #e50087;
-      max-width: 23ch;
-      text-align: center;
+      width: 18rem;
       background: var(--bg);
-      padding: 1.5em;
-      padding-block: 1.8em;
-      border-radius: 5px;
-      position: relative;
-      overflow: hidden;
       transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
+      gap: 1rem;
+      -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+        transform 0.15s ease;
+      -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+      & > :not(span) {
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+      }
+      .card__body {
+        color: #464853;
+        line-height: 1.5em;
+        font-size: 1em;
+        ul {
+          list-style: none;
+        }
+      }
+      p {
+        letter-spacing: 0.1rem !important;
+        font-size: 1.4rem;
+      }
+      span {
+        inset: 0;
+        color: var(--hover-text);
+        border-radius: 5px;
+        transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+      }
+      &:hover {
+        background: var(--hover-bg);
+      }
+      &:hover span {
+        top: 0 !important;
+        font-size: 1.2em;
+      }
+      &:hover > div,
+      &:hover > p {
+        opacity: 0;
+      }
     }
+  }
+}
 
-    .card__body {
-      color: #464853;
-      line-height: 1.5em;
-      font-size: 1em;
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+// * Start Max Width 425px (Small, Medium, Large Phones)
+@media screen and (max-width: 425px) {
+  // * Start certificates section
+  .certificates {
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+    -webkit-animation: move 4s linear infinite;
+    .certificates-sec {
+      .card {
+        --bg: #f7f7f8;
+        --hover-bg: #ffe5f4;
+        --hover-text: #e50087;
+        width: 18rem;
+        background: var(--bg);
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        gap: 1rem;
+        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+          transform 0.15s ease;
+        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        & > :not(span) {
+          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        .card__body {
+          color: #464853;
+          line-height: 1.5em;
+          font-size: 1em;
+          ul {
+            list-style: none;
+          }
+        }
+        p {
+          letter-spacing: 0.1rem !important;
+          font-size: 1.4rem;
+        }
+        span {
+          inset: 0;
+          color: var(--hover-text);
+          border-radius: 5px;
+          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        &:hover {
+          background: var(--hover-bg);
+        }
+        &:hover span {
+          top: 0 !important;
+          font-size: 1.2em;
+        }
+        &:hover > div,
+        &:hover > p {
+          opacity: 0;
+        }
+      }
     }
+  }
+}
 
-    .card > :not(span) {
-      transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+// * Start Max Width 1023px and min width 768px (Tablets)
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+  // * Start certificates section
+  .certificates {
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+    -webkit-animation: move 4s linear infinite;
+    .certificates-sec {
+      .card {
+        --bg: #f7f7f8;
+        --hover-bg: #ffe5f4;
+        --hover-text: #e50087;
+        width: 18rem;
+        background: var(--bg);
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        gap: 1rem;
+        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+          transform 0.15s ease;
+        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        & > :not(span) {
+          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        .card__body {
+          color: #464853;
+          line-height: 1.5em;
+          font-size: 1em;
+          ul {
+            list-style: none;
+          }
+        }
+        p {
+          letter-spacing: 0.1rem !important;
+          font-size: 1.4rem;
+        }
+        span {
+          inset: 0;
+          color: var(--hover-text);
+          border-radius: 5px;
+          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        &:hover {
+          background: var(--hover-bg);
+        }
+        &:hover span {
+          top: 0 !important;
+          font-size: 1.2em;
+        }
+        &:hover > div,
+        &:hover > p {
+          opacity: 0;
+        }
+      }
     }
+  }
+}
 
-    .card > strong {
-      display: block;
-      font-size: 1.4rem;
-      letter-spacing: -0.035em;
-    }
-
-    .card span {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--hover-text);
-      border-radius: 5px;
-      font-weight: bold;
-      top: 100%;
-      transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-    }
-
-    .card:hover span {
-      top: 0;
-      font-size: 1.2em;
-    }
-
-    .card:hover {
-      background: var(--hover-bg);
-    }
-
-    .card:hover > div,
-    .card:hover > strong {
-      opacity: 0;
+// * Start Min Width 1024px (Big Screens)
+@media screen and (min-width: 1024px) {
+  // * Start certificates section
+  .certificates {
+    background: #121212;
+    background: linear-gradient(
+      135deg,
+      #121212 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      #121212 50%,
+      #121212 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
+    -webkit-animation: move 4s linear infinite;
+    .certificates-sec {
+      .card {
+        --bg: #f7f7f8;
+        --hover-bg: #ffe5f4;
+        --hover-text: #e50087;
+        width: 18rem;
+        background: var(--bg);
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        gap: 1rem;
+        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+          transform 0.15s ease;
+        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        & > :not(span) {
+          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        .card__body {
+          color: #464853;
+          line-height: 1.5em;
+          font-size: 1em;
+          ul {
+            list-style: none;
+          }
+        }
+        p {
+          letter-spacing: 0.1rem !important;
+          font-size: 1.4rem;
+        }
+        span {
+          inset: 0;
+          color: var(--hover-text);
+          border-radius: 5px;
+          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+        }
+        &:hover {
+          background: var(--hover-bg);
+        }
+        &:hover span {
+          top: 0 !important;
+          font-size: 1.2em;
+        }
+        &:hover > div,
+        &:hover > p {
+          opacity: 0;
+        }
+      }
     }
   }
 }

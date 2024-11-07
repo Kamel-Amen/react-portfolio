@@ -7,6 +7,7 @@ import { faFaceLaughBeam } from '@fortawesome/free-regular-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import Loader from '../Reusable/Loader';
+import resume from '../../assets/docs/Kamel Amen  Frontend & UI Developer.pdf';
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -81,7 +82,7 @@ const Home = () => {
             <div className='box mt-4'>
               <div className='btn-two text-center position-relative'>
                 <a
-                  href='/src/assets/docs/Kamel Amen  Frontend & UI Developer.pdf'
+                  href={resume}
                   className='text-white text-decoration-none fs-5 d-block position-absolute w-100 h-100'
                   download='Kamel Amen - Frontend & UI Developer'
                 >

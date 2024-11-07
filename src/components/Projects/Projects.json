@@ -15,7 +15,7 @@
       ],
       "youtube": "https://youtu.be/yvf7wND_iYY",
       "preview": "https://youtu.be/yvf7wND_iYY",
-      "coverSrc": "/src/assets/projects/p1.png"
+      "coverSrc": "../../assets/projects/p1.png"
     },
     {
       "id": 2,
@@ -32,7 +32,7 @@
       ],
       "youtube": "https://youtu.be/nLL8qRH2Q5M",
       "preview": "https://youtu.be/nLL8qRH2Q5M",
-      "coverSrc": "/src/assets/projects/p2.png"
+      "coverSrc": "../../assets/projects/p2.png"
     },
     {
       "id": 3,
@@ -51,7 +51,7 @@
       "youtube": "https://kamel-amen.github.io/Just-Play/",
       "preview": "https://kamel-amen.github.io/Just-Play/",
       "sourceCode": "https://github.com/Kamel-Amen/Just-Play",
-      "coverSrc": "/src/assets/projects/p3.png"
+      "coverSrc": "../../assets/projects/p3.png"
     },
     {
       "id": 4,
@@ -70,7 +70,7 @@
       "youtube": "https://kamel-amen.github.io/e-market/",
       "preview": "https://kamel-amen.github.io/e-market/",
       "sourceCode": "https://github.com/Kamel-Amen/e-market",
-      "coverSrc": "/src/assets/projects/p4.png"
+      "coverSrc": "../../assets/projects/p4.png"
     },
     {
       "id": 5,
@@ -89,7 +89,7 @@
       "youtube": "https://youtu.be/heAzLRd5Bgk",
       "preview": "https://kamel-amen.github.io/LMS/",
       "sourceCode": "https://github.com/Kamel-Amen/LMS",
-      "coverSrc": "/src/assets/projects/p5.png"
+      "coverSrc": "../../assets/projects/p5.png"
     },
     {
       "id": 6,
@@ -108,7 +108,7 @@
       "youtube": "https://youtu.be/MGSSROx66v8",
       "preview": "https://todo-list-b7265.web.app/",
       "sourceCode": "https://github.com/Kamel-Amen/ToDo-List-Firebase",
-      "coverSrc": "/src/assets/projects/p6.png"
+      "coverSrc": "../../assets/projects/p6.png"
     }
   ]
 }

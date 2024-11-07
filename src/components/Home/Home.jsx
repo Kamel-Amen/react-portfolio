@@ -81,7 +81,7 @@ const Home = () => {
             <div className='box mt-4'>
               <div className='btn-two text-center position-relative'>
                 <a
-                  href='/public/docs/Kamel Amen  Frontend & UI Developer.pdf'
+                  href='/src/assets/docs/Kamel Amen  Frontend & UI Developer.pdf'
                   className='text-white text-decoration-none fs-5 d-block position-absolute w-100 h-100'
                   download='Kamel Amen - Frontend & UI Developer'
                 >

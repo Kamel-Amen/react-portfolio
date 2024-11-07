@@ -31,8 +31,6 @@ const Certificates = () => {
           <div
             className='card text-center pt-4 px-3 rounded-4 position-relative overflow-hidden d-flex justify-content-center align-items-center flex-column'
             key={doc.code}
-            data-aos='zoom-in'
-            data-aos-duration='2500'
           >
             <div className='icon'>
               <img src={icon} alt='certificate' />

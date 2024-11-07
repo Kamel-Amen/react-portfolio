@@ -77,7 +77,9 @@
 @media screen and (max-width: 425px) {
   // * Start certificates section
   .certificates {
-    background: #121212;
+    height: auto !important;
+    overflow: visible !important;
+    background: #121212 !important;
     background: linear-gradient(
       135deg,
       #121212 25%,
@@ -87,56 +89,17 @@
       #121212 75%,
       #1a1a1a 75%,
       #1a1a1a
-    );
-    background-size: 40px 40px;
-    animation: move 4s linear infinite;
-    -webkit-animation: move 4s linear infinite;
+    ) !important;
+    background-size: 40px 40px !important;
+    animation: move 4s linear infinite !important;
+    -webkit-animation: move 4s linear infinite !important;
     .certificates-sec {
+      display: block !important;
+      padding-bottom: 1rem;
       .card {
-        --bg: #f7f7f8;
-        --hover-bg: #ffe5f4;
-        --hover-text: #e50087;
-        width: 18rem;
-        background: var(--bg);
-        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        gap: 1rem;
-        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
-          transform 0.15s ease;
-        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        & > :not(span) {
-          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        .card__body {
-          color: #464853;
-          line-height: 1.5em;
-          font-size: 1em;
-          ul {
-            list-style: none;
-          }
-        }
-        p {
-          letter-spacing: 0.1rem !important;
-          font-size: 1.4rem;
-        }
-        span {
-          inset: 0;
-          color: var(--hover-text);
-          border-radius: 5px;
-          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        &:hover {
-          background: var(--hover-bg);
-        }
-        &:hover span {
-          top: 0 !important;
-          font-size: 1.2em;
-        }
-        &:hover > div,
-        &:hover > p {
-          opacity: 0;
-        }
+        width: 85%;
+        gap: 0.5rem;
+        margin: 1rem auto 3rem;
       }
     }
   }
@@ -144,138 +107,10 @@
 
 // * Start Max Width 1023px and min width 768px (Tablets)
 @media screen and (min-width: 760px) and (max-width: 1023px) {
-  // * Start certificates section
-  .certificates {
-    background: #121212;
-    background: linear-gradient(
-      135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    );
-    background-size: 40px 40px;
-    animation: move 4s linear infinite;
-    -webkit-animation: move 4s linear infinite;
-    .certificates-sec {
-      .card {
-        --bg: #f7f7f8;
-        --hover-bg: #ffe5f4;
-        --hover-text: #e50087;
-        width: 18rem;
-        background: var(--bg);
-        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        gap: 1rem;
-        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
-          transform 0.15s ease;
-        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        & > :not(span) {
-          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        .card__body {
-          color: #464853;
-          line-height: 1.5em;
-          font-size: 1em;
-          ul {
-            list-style: none;
-          }
-        }
-        p {
-          letter-spacing: 0.1rem !important;
-          font-size: 1.4rem;
-        }
-        span {
-          inset: 0;
-          color: var(--hover-text);
-          border-radius: 5px;
-          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        &:hover {
-          background: var(--hover-bg);
-        }
-        &:hover span {
-          top: 0 !important;
-          font-size: 1.2em;
-        }
-        &:hover > div,
-        &:hover > p {
-          opacity: 0;
-        }
-      }
-    }
-  }
+  //
 }
 
 // * Start Min Width 1024px (Big Screens)
 @media screen and (min-width: 1024px) {
-  // * Start certificates section
-  .certificates {
-    background: #121212;
-    background: linear-gradient(
-      135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    );
-    background-size: 40px 40px;
-    animation: move 4s linear infinite;
-    -webkit-animation: move 4s linear infinite;
-    .certificates-sec {
-      .card {
-        --bg: #f7f7f8;
-        --hover-bg: #ffe5f4;
-        --hover-text: #e50087;
-        width: 18rem;
-        background: var(--bg);
-        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        gap: 1rem;
-        -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1),
-          transform 0.15s ease;
-        -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
-        & > :not(span) {
-          transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -webkit-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-          -moz-transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        .card__body {
-          color: #464853;
-          line-height: 1.5em;
-          font-size: 1em;
-          ul {
-            list-style: none;
-          }
-        }
-        p {
-          letter-spacing: 0.1rem !important;
-          font-size: 1.4rem;
-        }
-        span {
-          inset: 0;
-          color: var(--hover-text);
-          border-radius: 5px;
-          transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
-        }
-        &:hover {
-          background: var(--hover-bg);
-        }
-        &:hover span {
-          top: 0 !important;
-          font-size: 1.2em;
-        }
-        &:hover > div,
-        &:hover > p {
-          opacity: 0;
-        }
-      }
-    }
-  }
+  //
 }

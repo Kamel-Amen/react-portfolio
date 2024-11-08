@@ -8,12 +8,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import Loader from '../Reusable/Loader';
+import itSharksCertificate from '../../assets/docs/R-1560.png';
+import neruroCertificate from '../../assets/docs/057000.jpg';
+
+const useBuildCertificatesArr = () => {
+  const certificatesArr = schema.certificates;
+  const certificatesImages = [itSharksCertificate, neruroCertificate];
+  let holderArr = [];
+  for (let i = 0; i < certificatesArr.length; i++) {
+    holderArr.push({
+      ...certificatesArr[i],
+      src: certificatesImages[i],
+    });
+  }
+  return holderArr;
+};
 
 const Certificates = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const [certificates, setCertificates] = useState(useBuildCertificatesArr());
 
   useEffect(() => {
-    // console.log(data.tools[0].icon);
     setTimeout(() => {
       setIsLoaded(true);
     }, 1000);
@@ -27,10 +43,10 @@ const Certificates = () => {
     <div className='certificates overflow-hidden w-100 h-100'>
       <Navbar />
       <section className='container certificates-sec d-flex mt-5 justify-content-evenly'>
-        {schema.certificates.map((doc) => (
+        {certificates.map((doc) => (
           <div
             className='card text-center pt-4 px-3 rounded-4 position-relative overflow-hidden d-flex justify-content-center align-items-center flex-column'
-            key={doc.code}
+            key={doc.id}
           >
             <div className='icon'>
               <img src={icon} alt='certificate' />

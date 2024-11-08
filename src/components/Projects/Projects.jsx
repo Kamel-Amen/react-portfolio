@@ -11,7 +11,6 @@ import {
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { toast } from 'react-toastify';
 import Loader from '../Reusable/Loader';
-// import { useBuildProjectsArray } from '../../Data/images';
 import projectCover1 from '../../assets/projects/p1.png';
 import projectCover2 from '../../assets/projects/p2.png';
 import projectCover3 from '../../assets/projects/p3.png';
@@ -20,7 +19,7 @@ import projectCover5 from '../../assets/projects/p5.png';
 import projectCover6 from '../../assets/projects/p6.png';
 import data from './Projects.json';
 
-const useBuildProjectsArray2 = () => {
+const useBuildProjectsArray = () => {
   const projects = data.projectsData;
   const projectsCovers = [
     projectCover1,
@@ -40,10 +39,10 @@ const useBuildProjectsArray2 = () => {
 const Projects = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState(
-    useBuildProjectsArray2()
+    useBuildProjectsArray()
   );
   // eslint-disable-next-line no-unused-vars
-  const [projects, setProjects] = useState(useBuildProjectsArray2());
+  const [projects, setProjects] = useState(useBuildProjectsArray());
   let filters = [
     {
       category: 'Vanilla JS',
@@ -59,6 +58,10 @@ const Projects = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleFilterEvent = (selectedGenre) => {
+    setIsLoaded(false);
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 500);
     if (selectedFilters.includes(selectedGenre)) {
       let filters = selectedFilters.filter((el) => el !== selectedGenre);
       setSelectedFilters(filters);

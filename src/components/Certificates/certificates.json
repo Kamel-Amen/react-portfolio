@@ -12,7 +12,7 @@
         "https://img.icons8.com/color/100/sass.png",
         "https://img.icons8.com/officel/80/react.png"
       ],
-      "src": "./docs/R-1560.png",
+      "src": "/src/assets/docs/R-1560.png",
       "code": "R-1560"
     },
     {
@@ -26,7 +26,7 @@
         "https://img.icons8.com/color/100/redux.png",
         "https://img.icons8.com/color/100/firebase.png"
       ],
-      "src": "./docs/057000.jpg",
+      "src": "/src/assets/docs/057000.jpg",
       "code": "neuroentix057000"
     }
   ]

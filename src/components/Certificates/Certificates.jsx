@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import Loader from '../Reusable/Loader';
+import { certificatesCovers } from '../../Data/images';
 
 const Certificates = () => {
   const [isLoaded, setIsLoaded] = useState(false);

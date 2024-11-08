@@ -95,7 +95,8 @@ const Certificates = () => {
                     </div>
                     <div className='modal-body'>
                       <img
-                        src={doc.src}
+                        // src={doc.src}
+                        src={certificatesCovers[0]}
                         alt={doc.title}
                         className='w-100 h-100'
                       />

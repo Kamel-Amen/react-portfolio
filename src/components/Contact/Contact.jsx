@@ -4,6 +4,7 @@ import './Contact.css';
 import contactIcon from '../../assets/svg/contact.svg';
 import linkedIn from '../../assets/gifs/linkedin.gif';
 import github from '../../assets/gifs/github.gif';
+import youtube from '../../assets/gifs/youtube.gif';
 import { useEffect, useState } from 'react';
 import Loader from '../Reusable/Loader';
 
@@ -68,6 +69,17 @@ const Contact = () => {
                   <img
                     src={linkedIn}
                     alt='linkedin'
+                    className='rounded-3'
+                    width={30}
+                    height={30}
+                  />
+                </a>
+              </li>
+              <li className='d-flex justify-content-center align-items-center'>
+                <a target='_blank' href='https://www.youtube.com/@kamel_amen'>
+                  <img
+                    src={youtube}
+                    alt='youtube'
                     className='rounded-3'
                     width={30}
                     height={30}

@@ -44,6 +44,11 @@
       "icon": "https://img.icons8.com/color/100/firebase.png",
       "title": "Firebase",
       "color": "#FFC400"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/nextjs.png",
+      "title": "NEXT JS",
+      "color": "#FBFBFB"
     }
   ]
 }

@@ -46,6 +46,11 @@
       "color": "#FFC400"
     },
     {
+      "icon": "https://img.icons8.com/color/100/typescript.png",
+      "title": "TypeScript",
+      "color": "#1976D2"
+    },
+    {
       "icon": "https://img.icons8.com/color/100/nextjs.png",
       "title": "NEXT JS",
       "color": "#FBFBFB"

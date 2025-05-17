@@ -41,6 +41,11 @@
       "color": "#F4511E"
     },
     {
+      "icon": "https://img.icons8.com/color/100/github.png",
+      "title": "Github",
+      "color": "#FDFDFD"
+    },
+    {
       "icon": "https://img.icons8.com/color/100/firebase.png",
       "title": "Firebase",
       "color": "#FFC400"
@@ -54,6 +59,11 @@
       "icon": "https://img.icons8.com/color/100/nextjs.png",
       "title": "NEXT JS",
       "color": "#FBFBFB"
+    },
+    {
+      "icon": "https://img.icons8.com/color/100/tailwind_css.png",
+      "title": "Tailwind CSS",
+      "color": "#00ACC1"
     }
   ]
 }
